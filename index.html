@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Гоша • 39 лет</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:#0b1830;
+color:white;
+font-family:Arial,sans-serif;
+overflow-x:hidden;
+}
+
+section{
+min-height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+padding:40px 20px;
+text-align:center;
+}
+
+h1{
+font-size:clamp(50px,10vw,110px);
+margin-bottom:20px;
+}
+
+h2{
+font-size:clamp(32px,6vw,60px);
+margin-bottom:30px;
+}
+
+p{
+max-width:800px;
+line-height:1.8;
+font-size:1.2rem;
+}
+
+.btn{
+padding:18px 30px;
+border:none;
+border-radius:999px;
+cursor:pointer;
+font-size:18px;
+font-weight:bold;
+background:#e8d8b5;
+color:#0b1830;
+margin-top:30px;
+}
+
+.hero{
+background:
+linear-gradient(
+180deg,
+#07111f 0%,
+#0b1830 100%
+);
+}
+
+.car{
+margin-bottom:60px;
+position:relative;
+width:320px;
+height:120px;
+}
+
+.carBody{
+position:absolute;
+bottom:0;
+width:100%;
+height:40px;
+background:#1a2f54;
+border-radius:30px;
+}
+
+.light{
+position:absolute;
+top:30px;
+width:70px;
+height:70px;
+border-radius:50%;
+background:#f8e7b5;
+box-shadow:
+0 0 15px #f8e7b5,
+0 0 40px #f8e7b5,
+0 0 80px #f8e7b5;
+animation:lights 2s ease forwards;
+opacity:0;
+}
+
+.leftLight{
+left:-30px;
+}
+
+.rightLight{
+right:-30px;
+}
+
+@keyframes lights{
+
+0%{
+opacity:0;
+}
+
+100%{
+opacity:1;
+}
+
+}
+
+.subtitle{
+max-width:700px;
+font-size:1.3rem;
+margin-top:20px;
+line-height:1.8;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:20px;
+width:min(900px,100%);
+}
+
+.gallery img{
+width:100%;
+aspect-ratio:1/1;
+object-fit:cover;
+border-radius:25px;
+box-shadow:0 0 30px rgba(255,255,255,.08);
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:20px;
+width:min(1100px,100%);
+}
+
+.card{
+background:#e8d8b5;
+color:#0b1830;
+padding:25px;
+border-radius:20px;
+font-size:18px;
+font-weight:bold;
+}
+
+.bigPhrase{
+font-size:clamp(60px,12vw,130px);
+font-weight:bold;
+margin-bottom:30px;
+}
+
+#phraseResult,
+#appleResult{
+margin-top:30px;
+font-size:30px;
+}
+
+.secret{
+position:fixed;
+bottom:20px;
+right:20px;
+font-size:32px;
+cursor:pointer;
+opacity:.25;
+transition:.3s;
+z-index:9999;
+}
+
+.secret:hover{
+opacity:1;
+transform:scale(1.2);
+}
+
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+
+<div class="car">
+
+<div class="light leftLight"></div>
+
+<div class="light rightLight"></div>
+
+<div class="carBody"></div>
+
+</div>
+
+<h1>39 ЛЕТ</h1>
+
+<h1>ГОША</h1>
+
+<p class="subtitle">
+
+Папа трёх принцесс.<br>
+Декоратор.<br>
+Человек с самой быстрой реакцией.<br>
+Любитель сладкого.<br>
+И просто наш Гоша.
+
+</p>
+
+<button class="btn" onclick="toggleMusic()">
+
+🎵 ВКЛЮЧИТЬ GET LUCKY
+
+</button>
+
+</section>
+
+<!-- ГАЛЕРЕЯ -->
+
+<section>
+
+<h2>НАШИ ВОСПОМИНАНИЯ</h2>
+
+<div class="gallery">
+
+<img src="photo1.jpg">
+<img src="photo2.jpg">
+
+<img src="photo3.jpg">
+<img src="photo4.jpg">
+
+<img src="photo5.jpg">
+<img src="photo6.jpg">
+
+</div>
+
+</section>
+
+<!-- ФАКТЫ -->
+
+<section>
+
+<h2>КТО ТАКОЙ ГОША?</h2>
+
+<div class="cards">
+
+<div class="card">
+🎨 Может воплотить практически любую идею
+</div>
+
+<div class="card">
+🏭 Создал собственное производство
+</div>
+
+<div class="card">
+👑 Папа трёх прекрасных принцесс
+</div>
+
+<div class="card">
+👨‍🍳 Очень вкусно готовит
+</div>
+
+<div class="card">
+😂 Шутит смешнее всех
+</div>
+
+<div class="card">
+🧔 Единственный мужчина в семье
+</div>
+
+<div class="card">
+🏹 В школьные годы его пронзило копьё
+</div>
+
+<div class="card">
+⚡ Самая быстрая реакция
+</div>
+
+<div class="card">
+🏎️ Гонщик от бога
+</div>
+
+<div class="card">
+🍫 Очень любит сладкое
+</div>
+
+</div>
+
+</section>
+
+<!-- ПРОИЗВОДСТВО -->
+
+<section>
+
+<h2>🏭 ПРОИЗВОДСТВО</h2>
+
+<p>
+
+Сколько фигур из пенопласта было создано?
+
+</p>
+
+<button
+class="btn"
+onclick="countFigures()">
+
+ПОСЧИТАТЬ
+
+</button>
+
+<div id="factoryResult"
+style="margin-top:30px;font-size:32px;">
+</div>
+
+</section>
+
+<!-- ПАПА ТРЁХ ПРИНЦЕСС -->
+
+<section>
+
+<h2>👑 ПАПА ТРЁХ ПРИНЦЕСС</h2>
+
+<button
+class="btn"
+onclick="showCrowns()">
+
+ПОКАЗАТЬ ГЛАВНОЕ ДОСТИЖЕНИЕ
+
+</button>
+
+<div id="crowns"
+style="
+margin-top:40px;
+font-size:70px;
+">
+</div>
+
+<div id="crownText"
+style="
+margin-top:20px;
+font-size:28px;
+">
+</div>
+
+</section>
+
+<!-- РЕАКЦИЯ -->
+
+<section>
+
+<h2>⚡ ПРОВЕРИТЬ РЕАКЦИЮ</h2>
+
+<button
+class="btn"
+onclick="checkReaction()">
+
+СТАРТ
+
+</button>
+
+<div id="reactionResult"
+style="
+margin-top:30px;
+font-size:32px;
+">
+</div>
+
+</section>
+
+<!-- НИЧЕГО СЕБЕ -->
+
+<section>
+
+<div class="bigPhrase">
+
+НИЧЕГО СЕБЕ
+
+</div>
+
+<button
+class="btn"
+onclick="nothingSebe()">
+
+НАЖАТЬ
+
+</button>
+
+<div id="phraseResult"></div>
+
+</section>
+
+<!-- ЯБЛОЧНЫЙ ТЕСТ -->
+
+<section>
+
+<h2>🍎 ЯБЛОЧНЫЙ ТЕСТ</h2>
+
+<p>
+
+Яблоко — это еда?
+
+</p>
+
+<div>
+
+<button
+class="btn"
+onclick="appleTest(false)">
+
+ДА
+
+</button>
+
+<button
+class="btn"
+onclick="appleTest(true)">
+
+НЕТ
+
+</button>
+
+</div>
+
+<div id="appleResult"></div>
+
+</section>
+<!-- ФИНАЛ -->
+
+<section>
+
+<h2 id="finalRole">
+
+Гоша
+
+</h2>
+
+<p
+style="
+max-width:800px;
+font-size:1.4rem;
+line-height:2;
+margin-top:40px;
+">
+
+Ничего себе.
+
+<br><br>
+
+39 лет.
+
+<br><br>
+
+И знаешь что?
+
+<br><br>
+
+Если собрать вместе все воспоминания,
+смех,
+семейные праздники,
+поездки,
+шутки
+и счастливые моменты —
+
+<br><br>
+
+получится очень хорошая жизнь.
+
+<br><br>
+
+Спасибо, что ты часть нашей жизни.
+
+<br><br>
+
+С днём рождения ❤️
+
+<br><br>
+
+Мама и сестра
+
+</p>
+
+</section>
+
+<!-- ПАСХАЛКА -->
+
+<div
+class="secret"
+onclick="secretMode()">
+
+🏎️
+
+</div>
+
+<audio
+id="music"
+src="get-lucky.mp3">
+</audio>
+
+<script>
+
+function toggleMusic(){
+
+const music =
+document.getElementById("music");
+
+if(music.paused){
+
+music.play();
+
+}else{
+
+music.pause();
+music.currentTime = 0;
+
+}
+
+}
+
+/* ПРОИЗВОДСТВО */
+
+function countFigures(){
+
+const el =
+document.getElementById(
+"factoryResult"
+);
+
+el.innerHTML = "1";
+
+setTimeout(()=>{
+el.innerHTML="27";
+},300);
+
+setTimeout(()=>{
+el.innerHTML="138";
+},600);
+
+setTimeout(()=>{
+el.innerHTML="594";
+},900);
+
+setTimeout(()=>{
+el.innerHTML="1248";
+},1200);
+
+setTimeout(()=>{
+el.innerHTML="5000";
+},1500);
+
+setTimeout(()=>{
+el.innerHTML="9999+";
+},1800);
+
+setTimeout(()=>{
+el.innerHTML=
+"Ошибка.<br><br>Количество фигур определить невозможно.";
+},2600);
+
+}
+
+/* КОРОНЫ */
+
+function showCrowns(){
+
+const crowns =
+document.getElementById("crowns");
+
+const text =
+document.getElementById("crownText");
+
+crowns.innerHTML = "👑";
+
+setTimeout(()=>{
+crowns.innerHTML="👑👑";
+},700);
+
+setTimeout(()=>{
+crowns.innerHTML="👑👑👑";
+},1400);
+
+setTimeout(()=>{
+text.innerHTML=
+"Главное достижение ❤️";
+},2000);
+
+}
+
+/* РЕАКЦИЯ */
+
+function checkReaction(){
+
+const el =
+document.getElementById(
+"reactionResult"
+);
+
+el.innerHTML="0.18 сек";
+
+setTimeout(()=>{
+el.innerHTML="0.11 сек";
+},500);
+
+setTimeout(()=>{
+el.innerHTML="0.06 сек";
+},1000);
+
+setTimeout(()=>{
+el.innerHTML="0.03 сек";
+},1500);
+
+setTimeout(()=>{
+el.innerHTML=
+"Ошибка.<br><br>Сравнение невозможно.<br>Эталонное значение.";
+},2200);
+
+}
+
+/* НИЧЕГО СЕБЕ */
+
+function nothingSebe(){
+
+const phrases = [
+
+"Ничего себе, уже 39.",
+
+"Ничего себе, сколько всего успел.",
+
+"Ничего себе, какая скорость.",
+
+"Ничего себе, какая хорошая жизнь."
+
+];
+
+const phrase =
+
+phrases[
+Math.floor(
+Math.random()*phrases.length
+)
+];
+
+document.getElementById(
+"phraseResult"
+).innerHTML = phrase;
+
+}
+
+/* ЯБЛОКО */
+
+function appleTest(answer){
+
+const el =
+document.getElementById(
+"appleResult"
+);
+
+if(answer){
+
+el.innerHTML =
+"✅ Правильно.<br>Вы хорошо знаете именинника.";
+
+}else{
+
+el.innerHTML =
+"❌ Неверно.<br>Спросите Гошу ещё раз.";
+
+}
+
+}
+
+/* ПАСХАЛКА */
+
+function secretMode(){
+
+alert(
+"🏎️ Достижение разблокировано!\\n\\nГонщик от бога.\\nСкорость реакции невозможно измерить."
+);
+
+}
+
+/* СМЕНА РОЛЕЙ В ФИНАЛЕ */
+
+const roles = [
+
+"Гоша",
+
+"Сын",
+
+"Брат",
+
+"Папа",
+
+"Декоратор",
+
+"Бизнесмен",
+
+"Гоша"
+
+];
+
+const finalRole =
+document.getElementById(
+"finalRole"
+);
+
+if(finalRole){
+
+const observer =
+new IntersectionObserver(
+
+(entries)=>{
+
+if(entries[0].isIntersecting){
+
+let current = 0;
+
+const interval =
+setInterval(()=>{
+
+current++;
+
+if(
+current >= roles.length
+){
+
+clearInterval(
+interval
+);
+
+return;
+
+}
+
+finalRole.textContent =
+roles[current];
+
+},1200);
+
+observer.disconnect();
+
+}
+
+},
+
+{
+threshold:0.7
+}
+
+);
+
+observer.observe(
+finalRole
+);
+
+}
+
+</script>
+
+</body>
+</html>
