@@ -445,6 +445,43 @@ onclick="appleTest(true)">
 
 <div id="appleResult"></div>
 
+  <section>
+
+<h2>🎂 39 СВЕЧЕЙ</h2>
+
+<p>
+Пора задувать свечи.
+</p>
+
+<button
+class="btn"
+onclick="blowCandles()">
+
+ЗАДУТЬ СВЕЧИ
+
+</button>
+
+<div
+id="cake"
+style="
+font-size:80px;
+margin-top:40px;
+">
+
+🕯️🕯️🕯️🕯️🕯️
+
+</div>
+
+<div
+id="cakeText"
+style="
+font-size:28px;
+margin-top:20px;
+">
+
+</div>
+
+
 </section>
 <!-- ФИНАЛ -->
 
@@ -699,7 +736,48 @@ alert(
 );
 
 }
+function blowCandles(){
 
+const cake =
+document.getElementById("cake");
+
+const text =
+document.getElementById("cakeText");
+
+cake.innerHTML =
+"🕯️🕯️🕯️🕯️🕯️";
+
+setTimeout(()=>{
+cake.innerHTML =
+"🕯️🕯️🕯️🕯️";
+},400);
+
+setTimeout(()=>{
+cake.innerHTML =
+"🕯️🕯️🕯️";
+},800);
+
+setTimeout(()=>{
+cake.innerHTML =
+"🕯️🕯️";
+},1200);
+
+setTimeout(()=>{
+cake.innerHTML =
+"🕯️";
+},1600);
+
+setTimeout(()=>{
+cake.innerHTML =
+"🎂";
+},2000);
+
+setTimeout(()=>{
+text.innerHTML =
+"✨ Желание загадано ✨";
+},2500);
+
+}
 /* СМЕНА РОЛЕЙ В ФИНАЛЕ */
 
 const roles = [
