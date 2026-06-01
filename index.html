@@ -87,6 +87,28 @@ height:40px;
 background:#1a2f54;
 border-radius:30px;
 }
+  #carBrand{
+
+position:absolute;
+
+left:50%;
+top:35px;
+
+transform:translateX(-50%);
+
+font-size:34px;
+
+font-weight:bold;
+
+letter-spacing:3px;
+
+color:#f8e7b5;
+
+text-shadow:
+0 0 10px #f8e7b5,
+0 0 30px #f8e7b5;
+
+}
 
 .light{
 position:absolute;
@@ -202,8 +224,15 @@ transform:scale(1.2);
 
 <div class="light rightLight"></div>
 
+<div id="carBrand">
+
+BMW
+
+</div>
+
 <div class="carBody"></div>
 
+и
 </div>
 
 <h1>39 ЛЕТ</h1>
@@ -851,6 +880,46 @@ threshold:0.7
 observer.observe(
 finalRole
 );
+
+}
+  const brands = [
+
+"BMW",
+
+"Mercedes",
+
+"Audi",
+
+"Porsche",
+
+"Lexus"
+
+];
+
+const brandEl =
+document.getElementById("carBrand");
+
+if(brandEl){
+
+let current = 0;
+
+const interval =
+setInterval(()=>{
+
+current++;
+
+if(current >= brands.length){
+
+clearInterval(interval);
+
+return;
+
+}
+
+brandEl.textContent =
+brands[current];
+
+},1000);
 
 }
 
