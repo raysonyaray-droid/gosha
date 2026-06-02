@@ -210,12 +210,67 @@ z-index:9999;
 opacity:1;
 transform:scale(1.2);
 }
-
+#loginScreen{
+position:fixed;
+inset:0;
+background:#07111f;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+z-index:99999;
+}
 </style>
 </head>
 
 <body>
+<div id="loginScreen">
 
+<h1 style="font-size:60px;">ДОСТУП К ЛЕГЕНДЕ</h1>
+
+<p style="margin-top:20px;">
+Введите пароль
+<br><br>
+<span style="opacity:.7;">
+Подсказка: день, когда всё началось
+</span>
+</p>
+
+<input
+type="text"
+id="passwordInput"
+placeholder="дд.мм.гггг"
+style="
+margin-top:20px;
+padding:15px;
+font-size:20px;
+border:none;
+border-radius:15px;
+text-align:center;
+">
+
+<br>
+
+<button
+class="btn"
+onclick="checkPassword()">
+
+ВОЙТИ
+
+</button>
+
+<div
+id="loginMessage"
+style="
+margin-top:30px;
+font-size:28px;
+">
+</div>
+
+</div>
+
+<div id="siteContent" style="display:none;">
 <section class="hero">
 
 <div class="car">
@@ -578,7 +633,60 @@ onclick="secretMode()">
 👍
 
 </div>
+function checkPassword(){
 
+const password = "22.05.1986";
+/* тут поставь настоящую дату */
+
+const input =
+document.getElementById(
+"passwordInput"
+).value;
+
+const msg =
+document.getElementById(
+"loginMessage"
+);
+
+if(input === password){
+
+msg.innerHTML =
+"Георгий обнаружен 👍";
+
+setTimeout(()=>{
+
+msg.innerHTML =
+"НИЧЕГО СЕБЕ...";
+
+},1500);
+
+setTimeout(()=>{
+
+msg.innerHTML =
+"39 ЛЕТ?";
+
+},3000);
+
+setTimeout(()=>{
+
+document.getElementById(
+"loginScreen"
+).style.display = "none";
+
+document.getElementById(
+"siteContent"
+).style.display = "block";
+
+},5000);
+
+}else{
+
+msg.innerHTML =
+"❌ Неверный пароль";
+
+}
+
+}
 <audio
 id="music"
 src="get-lucky.mp3">
@@ -923,6 +1031,6 @@ brands[current];
 }
 
 </script>
-
+</div>
 </body>
 </html>
